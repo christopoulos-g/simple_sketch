@@ -1,0 +1,73 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background:rgb(220, 218, 218);
+}
+
+#title {
+    margin-top: 1vw;
+    display: flex;
+    font-size: 3vw;
+    justify-content: center;
+    margin-bottom: 1vw;
+}
+
+.main {
+    display: flex;
+    align-items: baseline;
+    margin-top: 5vw;
+    margin-right: 7vw;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.5vw;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    outline: none;
+    opacity: 0.5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #6d6d6d;
+    cursor: pointer;
+}
+  
+
+#grid-container {
+    display: grid;
+    width: 35vw;
+    max-height: 3%;
+    margin: auto;
+    background-color: #2196F3;
+    padding: 10px;
+    align-self: center;
+    border-radius: 5px;
+    aspect-ratio: 1;
+}
+
+.grid-item {
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    font-size: 1vw;
+    text-align: center;
+    transition: 0.3s;
+    user-select: none; /* make divs unselectable ( not supported in IE 11 ) */
+}
+
+.grid-item:hover {
+    background-color: rgba(202, 199, 199, 0.555);
+}
