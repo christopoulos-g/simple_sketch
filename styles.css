@@ -3,6 +3,7 @@ body {
     background:rgb(220, 218, 218);
 }
 
+
 #title {
     margin-top: 1vw;
     display: flex;
@@ -11,25 +12,73 @@ body {
     margin-bottom: 1vw;
 }
 
+
+
 .main {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin-top: 5vw;
-    margin-right: 7vw;
+    justify-content: center;
+    margin-left: 0.5vw;
+    gap: 8vw;
+}
+
+
+
+.grid_container {
+    display: grid;
+    width: 38vw;
+    max-height: 3%;
+    margin: 0;
+    background-color: #4e4d4d;
+    padding: 10px;
+    border-radius: 5px;
+    aspect-ratio: 1;
+}
+
+.grid_item {
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    font-size: 1vw;
+    text-align: center;
+    cursor: url(./images/brush_cursor.png), auto;
+    user-select: none; /* make divs unselectable ( not supported in IE 11 ) */
+    transition: ease 0.2s;
+}
+
+.grid_item_active {
+    background: rgba(201, 12, 12, 0.938);
+}
+
+.grid_item:hover {
+    opacity: 0.6;
+
+}
+
+
+
+.slider_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+    align-self: flex-start;
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 20vw;
     height: 0.5vw;
     border-radius: 5px;
     background: rgb(255, 255, 255);
-    outline: none;
     opacity: 0.5;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
 }
-  
+
 .slider:hover {
     opacity: 1;
 }
@@ -37,37 +86,101 @@ body {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 12px;
-    height: 12px;
+    width: 1vw;
+    height: 1vw;
     border-radius: 50%;
     background: #6d6d6d;
     cursor: pointer;
-}
-  
-
-#grid-container {
-    display: grid;
-    width: 35vw;
-    max-height: 3%;
-    margin: auto;
-    background-color: #2196F3;
-    padding: 10px;
-    align-self: center;
-    border-radius: 5px;
-    aspect-ratio: 1;
+    transition: ease-in-out 0.10s;
 }
 
-.grid-item {
-    width: auto;
-    height: auto;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.151);
-    font-size: 1vw;
-    text-align: center;
-    transition: 0.3s;
-    user-select: none; /* make divs unselectable ( not supported in IE 11 ) */
+.slider::-webkit-slider-thumb:hover {
+    width: 1.25vw;
+    height: 1.25vw;
 }
 
-.grid-item:hover {
-    background-color: rgba(202, 199, 199, 0.555);
+
+
+.color_picker {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 18vw;
+    gap: 1vw;
+    padding-top: 2vw;
+}
+
+.color_picker * {
+    width: 100%;
+    height: 2vw;
+    width: 2vw;
+    background: rgb(88, 75, 75);
+    border-radius: 35%;
+    box-shadow: 0 0 0 0.15vw black;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.25s;
+    transition: ease-in-out 0.25s;
+}
+
+.color_picker *:hover {
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+#red {
+    background: rgb(199, 3, 3);
+}
+#yellow {
+    background: rgb(199, 170, 3);
+}
+#orange {
+    background: rgb(199, 65, 3);
+}
+#green {
+    background: rgb(36, 199, 3);
+}
+#blue {
+    background: rgb(3, 16, 199);
+}
+#purple {
+    background: rgb(137, 3, 199);
+}
+#white {
+    background: rgb(199, 199, 199);
+}
+#black {
+    background: rgb(10, 10, 10);
+}
+#gray {
+    background: rgb(104, 104, 104);
+}
+#aqua {
+    background: rgb(3, 186, 199);
+}
+#brown {
+    background: rgb(77, 37, 0);
+}
+#pink {
+    background: rgb(199, 3, 117);
+}
+
+
+
+#clear_grid {
+    height: 5vw;
+    padding-top: 8vw;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: ease-in-out 0.15s;
+}
+
+#clear_grid:hover {
+    height: 6vw;
+    opacity: 1;
 }
