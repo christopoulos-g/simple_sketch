@@ -133,40 +133,41 @@ body {
 }
 
 
-#red {
+
+#red, .red {
     background: rgb(199, 3, 3);
 }
-#yellow {
+#yellow, .yellow{
     background: rgb(199, 170, 3);
 }
-#orange {
+#orange, .orange {
     background: rgb(199, 65, 3);
 }
-#green {
+#green, .green {
     background: rgb(36, 199, 3);
 }
-#blue {
+#blue, .blue {
     background: rgb(3, 16, 199);
 }
-#purple {
+#purple, .purple {
     background: rgb(137, 3, 199);
 }
-#white {
+#white, .white {
     background: rgb(199, 199, 199);
 }
-#black {
+#black, .black {
     background: rgb(10, 10, 10);
 }
-#gray {
+#gray, .gray {
     background: rgb(104, 104, 104);
 }
-#aqua {
+#aqua, .aqua {
     background: rgb(3, 186, 199);
 }
-#brown {
+#brown, .brown {
     background: rgb(77, 37, 0);
 }
-#pink {
+#pink, .pink {
     background: rgb(199, 3, 117);
 }
 

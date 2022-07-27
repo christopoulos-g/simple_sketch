@@ -1,35 +1,36 @@
 let slider = document.getElementById("myRange");
 let sliderOutput = document.getElementById("value_h");
+var colorS = 'red'; // Only var works with window.colorS //
 
 let colorSelection = (color) => { // if statements will return gird_item_active color? //
     if(color == "red"){
-        console.log('haha');
+        window.colorS = 'red';
     }else if(color == "yellow"){
-        console.log('yellow')
+        window.colorS = 'yellow';
     }else if(color == "orange"){
-        console.log('yellow')
+        window.colorS = 'orange';
     }else if(color == "green"){
-        console.log('yellow')
+        window.colorS = 'green';
     }else if(color == "blue"){
-        console.log('yellow')
+        window.colorS = 'blue';
     }else if(color == "purple"){
-        console.log('yellow')
+        window.colorS = 'purple';
     }else if(color == "white"){
-        console.log('yellow')
-    }else if(color == "white"){
-        console.log('yellow')
+        window.colorS = 'white';
     }else if(color == "black"){
-        console.log('yellow')
+        window.colorS = 'black';
     }else if(color == "gray"){
-        console.log('yellow')
+        window.colorS = 'gray';
     }else if(color == "aqua"){
-        console.log('yellow')
+        window.colorS = 'aqua';
     }else if(color == "brown"){
-        console.log('yellow')
+        window.colorS = 'brown';
     }else if(color == "pink"){
-        console.log('yellow')
+        window.colorS = 'pink';
     }
+    console.log (colorS);
 }
+
 
 gridCreate(32);     
 sliderOutput.innerHTML = slider.value;
@@ -43,7 +44,8 @@ slider.oninput = function () {
 
 const colorApply = (e) => {
     if (e.target.classList.contains('grid_item')) {
-      e.target.classList.toggle('grid_item_active');
+
+      e.target.classList.toggle(colorS);
       console.log('inside if clicked');
     }
     console.log('outside clicked');
