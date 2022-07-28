@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Sketch</title>
     <script src="javascript.js" defer></script>
+    <link rel="icon" href="./images/icon.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +17,13 @@
     <div class = "main">
         
         <div class = "grid_container">
-        
         </div>
         
         <div class="slider_container">
             <input type="range" min="1" max="64" value="32" class="slider" id="myRange">
             <p>Grid size: <div id="value_h"></div></p>
             
-            <div class = "color_picker">
+            <div class = "color_picker" id="color_picker">    
                 <div id="red" onclick="colorSelection(this.id)"></div>
                 <div id="yellow" onclick="colorSelection(this.id)"></div>
                 <div id="orange" onclick="colorSelection(this.id)"></div>
@@ -36,17 +36,18 @@
                 <div id="aqua" onclick="colorSelection(this.id)"></div>
                 <div id="brown" onclick="colorSelection(this.id)"></div>
                 <div id="pink" onclick="colorSelection(this.id)"></div>
+                <img id="eraser" src="./images/eraser.png" onclick="colorSelection(this.id)">
             </div>
 
-            <img id = "clear_grid" src="./images/clear_icon.png" onclick="gridClear()"></img>
+            <img id = "clear_grid" src="./images/clear_icon.png" onclick="gridClearButton()">
         </div>
     </div> 
-    
+    <div class="footer">
+        <p>© Grigorios Christopoulos @ GitHub</p>
+    </div>
 
 </body>
 </html>
 
 
-<!-- TODO hint button with withd animation to help user know what they can do
-     TODO drag mouse to draw
-     TODO color picker finish-->
+<!-- TODO drag mouse to draw ?  -->

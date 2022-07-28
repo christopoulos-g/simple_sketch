@@ -3,7 +3,6 @@ body {
     background:rgb(220, 218, 218);
 }
 
-
 #title {
     margin-top: 1vw;
     display: flex;
@@ -12,8 +11,6 @@ body {
     margin-bottom: 1vw;
 }
 
-
-
 .main {
     display: flex;
     align-items: center;
@@ -21,9 +18,8 @@ body {
     justify-content: center;
     margin-left: 0.5vw;
     gap: 8vw;
+    padding-bottom: 10vw;
 }
-
-
 
 .grid_container {
     display: grid;
@@ -36,10 +32,14 @@ body {
     aspect-ratio: 1;
 }
 
+.grid_container_active {
+    border: 2px;
+}
+
 .grid_item {
     width: auto;
     height: auto;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(231, 231, 231);
     border: 1px solid rgba(0, 0, 0, 0.151);
     font-size: 1vw;
     text-align: center;
@@ -48,16 +48,9 @@ body {
     transition: ease 0.2s;
 }
 
-.grid_item_active {
-    background: rgba(201, 12, 12, 0.938);
-}
-
 .grid_item:hover {
     opacity: 0.6;
-
 }
-
-
 
 .slider_container {
     display: flex;
@@ -66,6 +59,12 @@ body {
     align-items: center;
     margin-top: 5vw;
     align-self: flex-start;
+    background:rgba(171, 173, 173, 0.637);
+    padding: 1vw;
+    border-radius: 2%;
+    box-shadow: 0 0 0 0.1vw black;
+    outline: none;
+    font-size: 1.25vw;
 }
 
 .slider {
@@ -99,12 +98,11 @@ body {
     height: 1.25vw;
 }
 
-
-
 .color_picker {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     width: 18vw;
     gap: 1vw;
     padding-top: 2vw;
@@ -120,8 +118,8 @@ body {
     outline: none;
     cursor: pointer;
     opacity: 0.6;
-    transition: opacity 0.25s;
-    transition: ease-in-out 0.25s;
+    transition: opacity 0.15s;
+    transition: ease-in-out 0.15s;
 }
 
 .color_picker *:hover {
@@ -132,7 +130,13 @@ body {
     opacity: 1;
 }
 
-
+.colors_focus{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
 
 #red, .red {
     background: rgb(199, 3, 3);
@@ -153,7 +157,7 @@ body {
     background: rgb(137, 3, 199);
 }
 #white, .white {
-    background: rgb(199, 199, 199);
+    background: rgb(252, 252, 252);
 }
 #black, .black {
     background: rgb(10, 10, 10);
@@ -171,17 +175,35 @@ body {
     background: rgb(199, 3, 117);
 }
 
-
+#eraser, .eraser {
+    background: rgb(231, 231, 231);
+    
+}
 
 #clear_grid {
     height: 5vw;
-    padding-top: 8vw;
+    margin-top: 8vw;
     cursor: pointer;
     opacity: 0.6;
-    transition: ease-in-out 0.15s;
+    transition: ease 0.05s;
 }
 
 #clear_grid:hover {
     height: 6vw;
     opacity: 1;
+}
+
+.footer{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: #1a1a1ab0;
+    color: #ffffff;
+    font-size: 0.75vw;
+    font-weight: 600;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
